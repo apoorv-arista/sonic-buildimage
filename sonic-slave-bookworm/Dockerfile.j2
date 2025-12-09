@@ -38,7 +38,7 @@ ARG PYTHON_CROSS_PLATFORM=linux_aarch64
 {%- endif %}
 
 RUN dpkg --add-architecture $arch
-RUN apt-get update && apt-get install -y eatmydata
+RUN apt-get update && (apt-get install -y eatmydata || (echo '#!/bin/bash' > /usr/bin/eatmydata && echo 'exec "$@"' >> /usr/bin/eatmydata && chmod +x /usr/bin/eatmydata))
 RUN eatmydata apt-get install -y crossbuild-essential-$arch
 RUN eatmydata apt-get install -y gcc-$gcc_arch
 
@@ -81,7 +81,7 @@ RUN PATH=/python_virtualenv/env3/bin/:$PATH python3 -m pip uninstall -y enum34
 RUN PATH=/python_virtualenv/env3/bin/:$PATH pip3 install --force-reinstall --no-cache-dir coverage
 {%- endif %}
 
-RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install -y \
+RUN apt-get update && (apt-get install -y eatmydata || (echo '#!/bin/bash' > /usr/bin/eatmydata && echo 'exec "$@"' >> /usr/bin/eatmydata && chmod +x /usr/bin/eatmydata)) && eatmydata apt-get install -y \
         apt-utils \
         default-jre-headless \
         openssh-server \

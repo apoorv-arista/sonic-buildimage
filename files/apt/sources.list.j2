@@ -2,7 +2,7 @@
 # Please add additional sources in /etc/apt/sources.list.d
 
 {% if DISTRIBUTION == 'bookworm' or DISTRIBUTION == 'trixie' -%}
-{%- set nonfree_component='non-free-firmware' -%}
+{%- set nonfree_component='non-free non-free-firmware' -%}
 {%- else -%}
 {%- set nonfree_component='non-free' -%}
 {%- endif %}

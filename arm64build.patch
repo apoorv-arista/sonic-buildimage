@@ -1,0 +1,11 @@
+diff --git a/Makefile.work b/Makefile.work
+index fe14eebae..9c4f806cc 100644
+--- a/Makefile.work
++++ b/Makefile.work
+@@ -393,7 +393,7 @@ endif
+DOCKER_RUN += -v /var/run/march/docker.sock:/var/run/docker.sock
+DOCKER_RUN += -v /var/run/march/docker.pid:/var/run/docker.pid
+DOCKER_RUN += -v /var/run/march/docker:/var/run/docker
+- DOCKER_RUN += -v $(DOCKER_DATA_ROOT_FOR_MULTIARCH):/var/lib/docker
++ DOCKER_RUN += -v $(DOCKER_DATA_ROOT_FOR_MULTIARCH):/var/lib/march/docker
+SONIC_USERFACL_DOCKERD_FOR_MULTIARCH := setfacl -m user:$(USER):rw /var/run/march/docker.sock
