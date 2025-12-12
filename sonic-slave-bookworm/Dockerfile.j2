@@ -42,6 +42,20 @@ RUN apt-get update && apt-get install -y eatmydata
 RUN eatmydata apt-get install -y crossbuild-essential-$arch
 RUN eatmydata apt-get install -y gcc-$gcc_arch
 
+{%- if CONFIGURED_ARCH == "arm64" %}
+# Install 32-bit ARM cross-compiler for kernel vdso32 compatibility layer
+RUN dpkg --add-architecture armhf
+# Restrict main sources to amd64,arm64 only (exclude armhf since debian-archive.trafficmanager.net doesn't support it)
+RUN sed -i 's/^deb /deb [arch=amd64,arm64] /g' /etc/apt/sources.list && \
+    sed -i 's/^deb-src /deb-src [arch=amd64,arm64] /g' /etc/apt/sources.list
+# Add armhf sources from deb.debian.org
+RUN echo "deb [arch=armhf] http://deb.debian.org/debian/ bookworm main contrib non-free-firmware" >> /etc/apt/sources.list.d/armhf.list && \
+    echo "deb [arch=armhf] http://deb.debian.org/debian/ bookworm-updates main contrib non-free-firmware" >> /etc/apt/sources.list.d/armhf.list && \
+    echo "deb [arch=armhf] http://deb.debian.org/debian-security/ bookworm-security main contrib non-free-firmware" >> /etc/apt/sources.list.d/armhf.list
+RUN eatmydata apt-get update
+RUN eatmydata apt-get install -y crossbuild-essential-armhf gcc-arm-linux-gnueabihf
+{%- endif %}
+
 RUN apt-mark hold g++-$gcc_arch
 RUN apt-mark hold g++-12-$gcc_arch
 RUN apt-mark hold gcc-$gcc_arch
