@@ -10,7 +10,9 @@
 # SONIC_CONFIG_BUILD_JOBS - set number of jobs for parallel build.
 # Corresponding -j argument will be passed to make command inside docker
 # container.
-SONIC_CONFIG_BUILD_JOBS = 1
+SONIC_CONFIG_BUILD_JOBS = 4
+
+BUILD_SONIC_BMC ?= y
 
 # SONIC_CONFIG_MAKE_JOBS - set number of parallel make jobs per package.
 # Corresponding -j argument will be passed to make/dpkg commands that build separate packages
@@ -38,7 +40,7 @@ CHANGE_DEFAULT_PASSWORD ?= n
 DEFAULT_USERNAME = admin
 
 # DEFAULT_PASSWORD - default password for installer build
-DEFAULT_PASSWORD = YourPaSsWoRd
+DEFAULT_PASSWORD = password
 
 # ENABLE_ZTP - installs Zero Touch Provisioning support.
 # ENABLE_ZTP = y
@@ -60,6 +62,8 @@ DEFAULT_PASSWORD = YourPaSsWoRd
 # SONIC_USE_PDDF_FRAMEWORK - Use PDDF generic drivers and plugins
 # Uncomment next line to enable:
 SONIC_USE_PDDF_FRAMEWORK = y
+# SONIC_INSTALL_ARISTA_PACKAGES - installs arista internal packages
+SONIC_INSTALL_ARISTA_PACKAGES = y
 
 # SONIC_ROUTING_STACK - specify the routing-stack being elected to drive SONiC's control-plane.
 # Supported routing stacks on SONiC are:
