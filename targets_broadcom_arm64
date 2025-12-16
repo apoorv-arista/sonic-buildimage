@@ -37,7 +37,7 @@ Setting /usr/bin/qemu-microblaze-static as binfmt interpreter for microblaze
 Setting /usr/bin/qemu-microblazeel-static as binfmt interpreter for microblazeel
 Setting /usr/bin/qemu-or1k-static as binfmt interpreter for or1k
 Setting /usr/bin/qemu-hexagon-static as binfmt interpreter for hexagon
-Killing march docker 3014286
+Killing march docker 3778957
 Starting docker build service...
 Checking sonic-slave-base image: sonic-slave-bookworm-march-arm64:b4324ba9e98
 Checking sonic-slave-user image: sonic-slave-bookworm-march-arm64-apoorv:686ef93fef8
@@ -95,7 +95,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedcrypto3
+E: Unable to locate package libmbedcrypto3:arm64
 W: Target Packages (main/binary-armhf/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
@@ -114,7 +114,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedcrypto3
+E: Unable to locate package libmbedcrypto3:arm64
 W: Target Packages (main/binary-armhf/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
@@ -133,7 +133,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedx509-0
+E: Unable to locate package libmbedx509-0:arm64
 W: Target Packages (main/binary-armhf/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
@@ -152,7 +152,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedx509-0
+E: Unable to locate package libmbedx509-0:arm64
 W: Target Packages (main/binary-armhf/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
@@ -171,7 +171,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedtls12
+E: Unable to locate package libmbedtls12:arm64
 W: Target Packages (main/binary-armhf/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
 W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:1 and /etc/apt/sources.list.d/debian.sources:1
@@ -190,7 +190,7 @@ W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times 
 W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-armhf) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
 W: Target Contents-deb (main/Contents-all) is configured multiple times in /etc/apt/sources.list.d/armhf.list:3 and /etc/apt/sources.list.d/debian.sources:2
-E: Unable to locate package libmbedtls12
+E: Unable to locate package libmbedtls12:arm64
 SONiC Build System
 
 Build Configuration
@@ -230,9 +230,9 @@ Build Configuration
 "SONIC_DEBUGGING_ON"              : ""
 "SONIC_PROFILING_ON"              : ""
 "KERNEL_PROCURE_METHOD"           : "build"
-"BUILD_TIMESTAMP"                 : "20251214.133714"
+"BUILD_TIMESTAMP"                 : "20251214.171821"
 "BUILD_LOG_TIMESTAMP"             : "none"
-"SONIC_IMAGE_VERSION"             : "arm64_build_202511.0-692c3463b"
+"SONIC_IMAGE_VERSION"             : "arm64_build_202511.0-dirty-20251214.171821"
 "BLDENV"                          : "bookworm"
 "VS_PREPARE_MEM"                  : "yes"
 "INCLUDE_MGMT_FRAMEWORK"          : "y"
@@ -311,13 +311,12 @@ target/files/bookworm/container_startup.py
 target/files/bookworm/remote_ctr.config.json
 target/files/bookworm/ctrmgrd.service
 target/files/bookworm/readiness_probe.sh
-target/debs/bookworm/phy-credo_1.0_amd64.deb
-target/debs/bookworm/libnuma1_2.0.16-1_amd64.deb
+target/debs/bookworm/libnuma1_2.0.16-1_arm64.deb
 target/files/bookworm/ixgbe.ko
 target/files/bookworm/rdb-cli
 target/debs/bookworm/bash_5.1-2_arm64.deb
 target/debs/bookworm/libsai_1.0.0_arm64.deb
-target/debs/bookworm/flashrom_0.9.7_amd64.deb
+target/debs/bookworm/flashrom_0.9.7_arm64.deb
 target/debs/bookworm/frr_10.4.1-sonic-0_arm64.deb
 target/debs/bookworm/ifupdown2_3.0.0-1_all.deb
 target/debs/bookworm/initramfs-tools_0.142_all.deb
@@ -388,8 +387,8 @@ target/debs/bookworm/sysmgr_1.0.0_arm64.deb
 target/debs/bookworm/systemd-sonic-generator_1.0.0_arm64.deb
 target/debs/bookworm/bash-tacplus_1.0.0_arm64.deb
 target/debs/bookworm/sonic-gnmi_0.1_arm64.deb
-target/debs/bookworm/sonic-platform-pddf_1.1_amd64.deb
-target/debs/bookworm/sonic-platform-arista_1.0_amd64.deb
+target/debs/bookworm/sonic-platform-pddf_1.1_arm64.deb
+target/debs/bookworm/sonic-platform-arista_1.0_arm64.deb
 target/debs/bookworm/bash-dbgsym_5.1-2_arm64.deb
 target/debs/bookworm/dash-ha-dbgsym_1.0.0_arm64.deb
 target/debs/bookworm/libsai-dev_1.0.0_arm64.deb
@@ -398,7 +397,7 @@ target/debs/bookworm/sonic-dhcp6relay-dbgsym_1.0.0-0_arm64.deb
 target/debs/bookworm/sonic-eventd-dbgsym_1.0.0-0_arm64.deb
 target/debs/bookworm/sonic-rsyslog-plugin_1.0.0-0_arm64.deb
 target/debs/bookworm/sonic-rsyslog-plugin-dbgsym_1.0.0-0_arm64.deb
-target/debs/bookworm/flashrom-dbgsym_0.9.7_amd64.deb
+target/debs/bookworm/flashrom-dbgsym_0.9.7_arm64.deb
 target/debs/bookworm/iccpd-dbg_0.0.5_arm64.deb
 target/debs/bookworm/iptables-dbgsym_1.8.9-2_arm64.deb
 target/debs/bookworm/libip4tc2_1.8.9-2_arm64.deb
@@ -527,7 +526,7 @@ target/debs/bookworm/vpp-plugin-devtools_2506-0.1+b1sonic1_arm64.deb
 target/debs/bookworm/vpp-dev_2506-0.1+b1sonic1_arm64.deb
 target/debs/bookworm/vpp-dbg_2506-0.1+b1sonic1_arm64.deb
 target/debs/bookworm/wpasupplicant-dbgsym_2.9.0-14_arm64.deb
-target/debs/bookworm/sonic-platform-pddf-sym_1.1_amd64.deb
+target/debs/bookworm/sonic-platform-pddf-sym_1.1_arm64.deb
 target/debs/bookworm/frr-pythontools_10.4.1-sonic-0_all.deb
 target/debs/bookworm/frr-dbgsym_10.4.1-sonic-0_arm64.deb
 target/debs/bookworm/frr-snmp_10.4.1-sonic-0_arm64.deb
@@ -561,8 +560,8 @@ target/debs/bookworm/krb5-multidev_1.20.1-2+deb12u1+fips_arm64.deb
 target/debs/bookworm/libkrb5-dev_1.20.1-2+deb12u1+fips_arm64.deb
 target/debs/bookworm/libpam-tacplus_1.4.1-1_arm64.deb
 target/debs/bookworm/python3-sonic-platform-arista_1.0_all.deb
-target/debs/bookworm/drivers-sonic-platform-arista_1.0_amd64.deb
-target/debs/bookworm/sonic-platform-arista-libs_1.0_amd64.deb
+target/debs/bookworm/drivers-sonic-platform-arista_1.0_arm64.deb
+target/debs/bookworm/sonic-platform-arista-libs_1.0_arm64.deb
 target/python-wheels/bookworm/asyncsnmp-2.1.0-py3-none-any.whl
 target/python-wheels/bookworm/ptf-0.10.0.post0-py3-none-any.whl
 target/python-wheels/bookworm/redis_dump_load-1.1-py3-none-any.whl
