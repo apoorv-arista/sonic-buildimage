@@ -18,24 +18,24 @@ $(VPP_MAIN)_DEPENDS += $(VPPINFRA)
 $(VPP_MAIN)_RDEPENDS += $(VPPINFRA)
 $(eval $(call add_derived_package,$(VPPINFRA),$(VPP_MAIN)))
 
-LIBNUMA := $(shell apt-get download --print-uris libnuma1 | cut -d " " -f2)
-$(LIBNUMA)_URL := $(shell apt-get download --print-uris libnuma1 | cut -d " " -f1)
+LIBNUMA := $(shell apt-get download --print-uris libnuma1:$(CONFIGURED_ARCH) | cut -d " " -f2)
+$(LIBNUMA)_URL := $(shell apt-get download --print-uris libnuma1:$(CONFIGURED_ARCH) | cut -d " " -f1)
 SONIC_ONLINE_DEBS += $(LIBNUMA)
 
-LIBMBEDCRYPTO3 := $(shell apt-get download --print-uris libmbedcrypto3 | cut -d " " -f2)
-$(LIBMBEDCRYPTO3)_URL := $(shell apt-get download --print-uris libmbedcrypto3 | cut -d " " -f1)
+LIBMBEDCRYPTO3 := $(shell apt-get download --print-uris libmbedcrypto3:$(CONFIGURED_ARCH) | cut -d " " -f2)
+$(LIBMBEDCRYPTO3)_URL := $(shell apt-get download --print-uris libmbedcrypto3:$(CONFIGURED_ARCH) | cut -d " " -f1)
 SONIC_ONLINE_DEBS += $(LIBMBEDCRYPTO3)
 
 
-LIBMBEDX509 := $(shell apt-get download --print-uris libmbedx509-0 | cut -d " " -f2)
-$(LIBMBEDX509)_URL := $(shell apt-get download --print-uris libmbedx509-0 | cut -d " " -f1)
+LIBMBEDX509 := $(shell apt-get download --print-uris libmbedx509-0:$(CONFIGURED_ARCH) | cut -d " " -f2)
+$(LIBMBEDX509)_URL := $(shell apt-get download --print-uris libmbedx509-0:$(CONFIGURED_ARCH) | cut -d " " -f1)
 SONIC_ONLINE_DEBS += $(LIBMBEDX509)
 $(LIBMBEDX509)_DEPENDS += $(LIBMBEDCRYPTO3)
 $(LIBMBEDX509)_RDEPENDS += $(LIBMBEDCRYPTO3)
 
 
-LIBMBEDTLS12 := $(shell apt-get download --print-uris libmbedtls12 | cut -d " " -f2)
-$(LIBMBEDTLS12)_URL := $(shell apt-get download --print-uris libmbedtls12 | cut -d " " -f1)
+LIBMBEDTLS12 := $(shell apt-get download --print-uris libmbedtls12:$(CONFIGURED_ARCH) | cut -d " " -f2)
+$(LIBMBEDTLS12)_URL := $(shell apt-get download --print-uris libmbedtls12:$(CONFIGURED_ARCH) | cut -d " " -f1)
 SONIC_ONLINE_DEBS += $(LIBMBEDTLS12)
 $(LIBMBEDTLS12)_DEPENDS += $(LIBMBEDCRYPTO3) $(LIBMBEDX509)
 $(LIBMBEDTLS12)_RDEPENDS += $(LIBMBEDCRYPTO3) $(LIBMBEDX509)
