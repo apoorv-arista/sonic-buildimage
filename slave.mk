@@ -310,7 +310,13 @@ BMC_EXCLUDED_DOCKER_RULES := \
     docker-telemetry-watchdog.mk \
     docker-telemetry-sidecar.mk \
     syncd.mk \
-    dbsyncd-py3.mk
+    dbsyncd-py3.mk \
+    sonic-nettools.mk \
+    flashrom.mk \
+    sonic-dash-api.mk \
+    dash-sai.mk \
+    dash-ha.mk \
+    snmpd.mk
 else
 BMC_EXCLUDED_DOCKER_RULES :=
 endif
