@@ -316,7 +316,29 @@ BMC_EXCLUDED_DOCKER_RULES := \
     sonic-dash-api.mk \
     dash-sai.mk \
     dash-ha.mk \
-    snmpd.mk
+    snmpd.mk \
+    vpp.mk \
+    frr.mk \
+    sonic-frr-mgmt-framework.mk \
+    libyang.mk \
+    libyang3.mk \
+    libyang3-py3.mk \
+    sonic-yang-models-py3.mk \
+    sonic-yang-mgmt-py3.mk \
+    swss-common.mk \
+    docker-swss-layer-bookworm.mk \
+    docker-swss-layer-bullseye.mk \
+    docker-swss-layer-buster.mk \
+    swss.mk \
+    swsssdk-py2.mk \
+    swsssdk-py3.mk \
+    sairedis.mk \
+    eventd.mk \
+    syslog-counter.mk \
+    sonic-supervisord-utilities-rs.mk \
+    sonic-ctrmgrd-rs.mk \
+    sonic-py-common.mk \
+    docker-config-engine-bookworm.mk
 else
 BMC_EXCLUDED_DOCKER_RULES :=
 endif
