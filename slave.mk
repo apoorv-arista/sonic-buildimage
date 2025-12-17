@@ -338,7 +338,25 @@ BMC_EXCLUDED_DOCKER_RULES := \
     sonic-supervisord-utilities-rs.mk \
     sonic-ctrmgrd-rs.mk \
     sonic-py-common.mk \
-    docker-config-engine-bookworm.mk
+    docker-config-engine-bookworm.mk \
+    sonic-config.mk \
+    sonic-ledd.mk \
+    sonic-stormond.mk \
+    sonic-pcied.mk \
+    docker-database.mk \
+    system-health.mk \
+    sonic-platform-common.mk \
+    sonic-ctrmgrd.mk \
+    sonic-syseepromd.mk \
+    sonic-thermalctld.mk \
+    sonic-sensormond.mk \
+    sonic-psud.mk \
+    sonic-utilities.mk \
+    sonic-chassisd.mk \
+    sonic-xcvrd.mk \
+    sonic-ycabled.mk \
+    docker-platform-monitor.mk \
+    sonic-host-services.mk
 else
 BMC_EXCLUDED_DOCKER_RULES :=
 endif
