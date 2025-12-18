@@ -4,8 +4,8 @@
 	branch = 202511
 [submodule "sonic-linux-kernel"]
 	path = src/sonic-linux-kernel
-	url = https://github.com/sonic-net/sonic-linux-kernel
-	branch = 202511
+	url = https://github.com/apoorv-arista/sonic-linux-kernel.git
+	branch = bmc_ast2720_arm64
 [submodule "sonic-sairedis"]
 	path = src/sonic-sairedis
 	url = https://github.com/sonic-net/sonic-sairedis
