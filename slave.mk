@@ -277,14 +277,115 @@ PDDF_SUPPORT = n
 endif
 export PDDF_SUPPORT
 
-include $(RULES_PATH)/*.mk
+# Define list of docker service .mk files to exclude for BMC build
+ifeq ($(BUILD_SONIC_BMC),y)
+BMC_EXCLUDED_DOCKER_RULES := \
+    docker-auditd.mk \
+    docker-auditd-watchdog.mk \
+    docker-bmp.mk \
+    docker-bmp-watchdog.mk \
+    docker-dash-ha.mk \
+    docker-dhcp-relay.mk \
+    docker-dhcp-server.mk \
+    docker-eventd.mk \
+    docker-fpm-frr.mk \
+    docker-fpm.mk \
+    docker-gnmi.mk \
+    docker-gnmi-watchdog.mk \
+    docker-iccpd.mk \
+    docker-lldp.mk \
+    docker-macsec.mk \
+    docker-mux.mk \
+    docker-nat.mk \
+    docker-orchagent.mk \
+    docker-p4rt.mk \
+    docker-restapi.mk \
+    docker-router-advertiser.mk \
+    docker-sflow.mk \
+    docker-snmp.mk \
+    docker-sonic-mgmt-framework.mk \
+    docker-sonic-mgmt.mk \
+    docker-sonic-sdk.mk \
+    docker-sonic-sdk-buildenv.mk \
+    docker-stp.mk \
+    docker-sysmgr.mk \
+    docker-teamd.mk \
+    docker-telemetry.mk \
+    docker-telemetry-watchdog.mk \
+    docker-telemetry-sidecar.mk \
+    syncd.mk \
+    dbsyncd-py3.mk \
+    sonic-nettools.mk \
+    flashrom.mk \
+    sonic-dash-api.mk \
+    dash-sai.mk \
+    dash-ha.mk \
+    snmpd.mk \
+    vpp.mk \
+    frr.mk \
+    sonic-frr-mgmt-framework.mk \
+    libyang.mk \
+    libyang3.mk \
+    libyang3-py3.mk \
+    sonic-yang-models-py3.mk \
+    sonic-yang-mgmt-py3.mk \
+    swss-common.mk \
+    docker-swss-layer-bookworm.mk \
+    docker-swss-layer-bullseye.mk \
+    docker-swss-layer-buster.mk \
+    swss.mk \
+    swsssdk-py2.mk \
+    swsssdk-py3.mk \
+    sairedis.mk \
+    eventd.mk \
+    syslog-counter.mk \
+    sonic-supervisord-utilities-rs.mk \
+    sonic-ctrmgrd-rs.mk \
+    sonic-py-common.mk \
+    docker-config-engine-bookworm.mk \
+    sonic-config.mk \
+    sonic-ledd.mk \
+    sonic-stormond.mk \
+    sonic-pcied.mk \
+    docker-database.mk \
+    system-health.mk \
+    sonic-platform-common.mk \
+    sonic-ctrmgrd.mk \
+    sonic-syseepromd.mk \
+    sonic-thermalctld.mk \
+    sonic-sensormond.mk \
+    sonic-psud.mk \
+    sonic-utilities.mk \
+    sonic-chassisd.mk \
+    sonic-xcvrd.mk \
+    sonic-ycabled.mk \
+    docker-platform-monitor.mk \
+    sonic-host-services.mk
+else
+BMC_EXCLUDED_DOCKER_RULES :=
+endif
+
+# Get all rule files
+ALL_RULES := $(wildcard $(RULES_PATH)/*.mk)
+
+# Filter out excluded docker rules for BMC builds
+INCLUDED_RULES := $(filter-out $(addprefix $(RULES_PATH)/,$(BMC_EXCLUDED_DOCKER_RULES)),$(ALL_RULES))
+
+# Include filtered rules
+include $(INCLUDED_RULES)
+
 ifneq ($(CONFIGURED_PLATFORM), undefined)
 ifeq ($(PDDF_SUPPORT), y)
 PDDF_DIR = pddf
 PLATFORM_PDDF_PATH = platform/$(PDDF_DIR)
 include $(PLATFORM_PDDF_PATH)/rules.mk
 endif
+ifeq ($(BUILD_SONIC_BMC),y)
+# Include BMC platform rules (platform/bmc/rules.mk)
+include platform/bmc/rules.mk
+else
 include $(PLATFORM_PATH)/rules.mk
+endif
 endif
 
 ifeq ($(USERNAME),)
