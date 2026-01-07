@@ -360,7 +360,8 @@ BMC_EXCLUDED_DOCKER_RULES := \
     sonic-xcvrd.mk \
     sonic-ycabled.mk \
     docker-platform-monitor.mk \
-    sonic-host-services.mk
+    sonic-host-services.mk \
+	sonic-host-services-rs.mk
 else
 BMC_EXCLUDED_DOCKER_RULES :=
 endif
